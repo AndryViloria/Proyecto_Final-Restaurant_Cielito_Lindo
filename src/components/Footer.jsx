@@ -1,6 +1,8 @@
-const Footer = () =>{
-    return(
-<p>dsfefgthbghn</p>
+const Footer = () => {
+    return (
+        <footer>
+            <small>Copyright ©️ Cielito Lindo Corporation 2022. Todos los derechos reservados.</small>
+        </footer>
     )
 }
 

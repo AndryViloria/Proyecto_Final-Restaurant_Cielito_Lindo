@@ -1,16 +1,18 @@
 .encabezado {
   background: white;
   width: 100%;
+  border-bottom: 1px solid #a7c81f;
+  ;
 }
 
 .menu {
-  background: yellow;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto;
   width: 100%;
   max-width: 992px;
+  padding: 10px 0;
 }
 
 .menu .logo_nombre {
@@ -19,28 +21,40 @@
 }
 
 .menu .logo_nombre h1 {
-  color: red;
+  color: #000;
+  font-family: 'Lobster', cursive;
+  font-weight: 400;
+  padding-left: 10px;
 }
 
 .menu .logo_nombre img {
   width: 100%;
-  max-width: 100px;
+  max-width: 80px;
 }
 
 button {
-  width: 100px;
+  font-family: 'Bitter', serif;
+  width: 120px;
   padding: 10px 10px;
-  background: green;
+  background-color: #a7c81f;
   color: white;
   border: none;
   border-radius: 4px;
+  margin-left: 15px;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background-color: #849e19;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .img_fondo {
-  background-image: url(assets/img_de_fondo.jpg);
+  background-image: url(./assets/background.jpg);
   background-size: cover;
   background-position: top center;
-  height: 408px;
+  height: 740px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -49,22 +63,28 @@ button {
   justify-content: center;
 }
 
-.img_fondo h1  {
+.img_fondo h1 {
   color: white;
   font-family: 'Bitter', serif;
   font-size: 3em;
+  text-shadow: 5px 10px 20px #000;
 }
 
 .img_fondo h2 {
-  color: green;
+  color: #a7c81f;
   font-family: 'Bitter', serif;
   font-size: 2.5em;
+  text-shadow: 2px 2px 1px #000;
 }
 
 footer {
-  background: orangered;
+  background-color: #fff;
   width: 100%;
   text-align: center;
   padding: 20px;
   /* min-height: 100vh; */
+}
+
+footer small {
+  font-family: 'Bitter', serif;
 }

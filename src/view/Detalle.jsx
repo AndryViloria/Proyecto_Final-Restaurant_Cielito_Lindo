@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Detalle = ()=>{
     return (
         <main>
@@ -24,8 +26,8 @@ const Detalle = ()=>{
                         <li>Cilantro, cebolla y limón</li>
                     </ul>
 
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    
+                    <Link to="/cart"><i class="fa-solid fa-cart-shopping"></i></Link>
+
                 </article>
             </section>
         </main>

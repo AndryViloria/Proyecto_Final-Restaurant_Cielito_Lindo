@@ -1,8 +1,8 @@
+/* comienzo componente Navbar */
 .encabezado {
   background: white;
   width: 100%;
   border-bottom: 1px solid #a7c81f;
-  ;
 }
 
 .menu {
@@ -49,7 +49,9 @@ button:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+/* cierre componente Navbar */
 
+/* comienzo view Home */
 .img_fondo {
   background-image: url(./assets/background.jpg);
   background-size: cover;
@@ -76,8 +78,118 @@ button:hover {
   font-size: 2.5em;
   text-shadow: 2px 2px 1px #000;
 }
+/* cierre view Home */
 
+/* comienzo view Iniciar, Registrarse y AgregarProducto */
+main {
+  width: 100%;
+  max-width: 992px;
+  margin: 50px auto;
+}
+
+main h2 {
+  font-family: 'Bitter', serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  padding-bottom: 10px;
+  background-color: #ffebcd;
+}
+
+main form label {
+  padding-top: 20px;
+  margin-left: 250px;
+  font-family: 'Bitter', serif;
+}
+
+main form input {
+  width: 50%;
+  margin: 5px auto;
+  padding: 10px 5px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #9e9e9e;
+}
+
+::placeholder {
+  font-family: 'Bitter', serif;
+}
+
+form .btn-form {
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form .btn-form .iniciar-sesion {
+  margin: auto;
+  text-align: center;
+  margin: 0 10px;
+  background-color: #a7c81f;
+}
+
+form .btn-form .iniciar-sesion:hover {
+  background-color: #849e19;
+}
+
+form .btn-form .volver {
+  margin: auto;
+  text-align: center;
+  margin: 0 10px;
+  background-color: #a5432a;
+}
+
+form .btn-form .volver:hover {
+  background-color: #7f3421;
+}
+
+form .btn-form .agregar-producto {
+  margin: auto;
+  text-align: center;
+  margin: 0 10px;
+  background-color: #a7c81f;
+  width: 70%;
+}
+
+form .btn-form .agregar-producto:hover {
+  background-color: #849e19;
+}
+
+form p {
+  padding-top: 10px;
+  text-align: center;
+  font-family: 'Bitter', serif;
+}
+
+form span {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+form textarea {
+  width: 50%;
+  max-width: 50%;
+  min-width: 50%;
+  min-height: 100px;
+  max-height: 100px;
+  margin: 5px auto;
+  padding: 10px 5px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #9e9e9e;
+}
+/* comienzo view Iniciar, Registrarse y AgregarProducto */
+
+/* comienzo componente Footer */
 footer {
+  border-top: 1px solid #a7c81f;
   background-color: #fff;
   width: 100%;
   text-align: center;
@@ -87,4 +199,42 @@ footer {
 
 footer small {
   font-family: 'Bitter', serif;
+}
+/* cierre componente Footer */
+
+
+
+
+/* CARRITO DE COMPRAS */
+.cart h2{
+  margin: 30px;
+}
+
+.pedido{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: 20px; */
+  padding: 0 50px 50px 50px;
+}
+
+.pedido img{
+  width: 80px;
+}
+
+.pedido button{
+  width: 40px;
+  font-weight: bold;
+}
+
+.total_pagar {
+  text-align: end;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  
+}
+
+.total_pagar p{
+  font-size: 22px;
+  font-weight: bold;
 }

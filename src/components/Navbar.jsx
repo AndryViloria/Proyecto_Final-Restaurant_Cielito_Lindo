@@ -1,5 +1,7 @@
+import {Link} from 'react-router-dom'
+
 const Navbar = () => {
-    return (
+    return ( 
         <header className="encabezado">
 
 
@@ -10,8 +12,9 @@ const Navbar = () => {
                 </div>
 
                 <div className="btns">
-                    <button>Menú</button>
-                    <button>Iniciar Sesión</button>
+                    <Link to="/menu"><button>Menú</button></Link>
+
+                    <Link to="/iniciar"><button>Iniciar Sesión</button></Link>
                 </div>
 
             </nav>

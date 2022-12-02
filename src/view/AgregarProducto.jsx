@@ -18,7 +18,7 @@ const AgregarProducto = () => {
                 <textarea></textarea>
 
                 <div className="btn-form">
-                    <Link to="/menu"><button className="agregar-producto">Agregar Producto</button></Link>
+                    <Link to="/detalle"><button className="agregar-producto">Agregar Producto</button></Link>
                     <Link to="/"><button className="volver">Volver</button></Link>
                 </div>
 

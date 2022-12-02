@@ -49,6 +49,7 @@ button:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
 /* cierre componente Navbar */
 
 /* comienzo view Home */
@@ -78,6 +79,7 @@ button:hover {
   font-size: 2.5em;
   text-shadow: 2px 2px 1px #000;
 }
+
 /* cierre view Home */
 
 /* comienzo view Iniciar, Registrarse y AgregarProducto */
@@ -130,7 +132,7 @@ form .btn-form {
 form .btn-form .iniciar-sesion {
   margin: auto;
   text-align: center;
-  margin: 0 10px;
+  padding: 10px 0;
   background-color: #a7c81f;
 }
 
@@ -152,9 +154,9 @@ form .btn-form .volver:hover {
 form .btn-form .agregar-producto {
   margin: auto;
   text-align: center;
-  margin: 0 10px;
   background-color: #a7c81f;
-  width: 70%;
+  padding: 10px 0;
+
 }
 
 form .btn-form .agregar-producto:hover {
@@ -185,7 +187,133 @@ form textarea {
   border-radius: 5px;
   border: 1px solid #9e9e9e;
 }
-/* comienzo view Iniciar, Registrarse y AgregarProducto */
+
+/* comiezo de view Menu */
+main .select {
+  display: flex;
+  justify-content: center;
+}
+
+main .categoria {
+  background-color: #ffffff;
+  color: #000;
+  margin: 30px 0;
+  width: 70%;
+  padding: 10px 0;
+  font-family: 'Bitter', sans-serif;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 1px solid #a7c81f;
+  outline: none;
+}
+
+main .card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .card .tarjeta {
+  width: 33.3%;
+  padding: 0 20px;
+}
+
+.card .tarjeta img {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+}
+
+.card .tarjeta h3 {
+  font-family: 'Bitter', sans-serif;
+  text-align: center;
+}
+
+.card .tarjeta p {
+  font-family: 'Bitter', sans-serif;
+  text-align: center;
+  font-weight: 500;
+}
+
+.tarjeta .botones-menu {
+  margin: 20px 0;
+}
+
+.tarjeta .botones-menu .agregar-carro {
+  background-color: #a5432a;
+}
+
+.tarjeta .botones-menu .agregar-carro:hover {
+  background-color: #7f3421;
+}
+
+/* cierre view menu */
+
+/* comienzo view detalle */
+.detalle {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #ffebcd;
+  margin: 30px auto;
+  width: 100%;
+}
+
+.detalle .img_detalle img {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.detalle .descrip_detalle {
+  padding: 10px 10px;
+}
+
+.detalle .descrip_detalle {
+  padding: 5px 20px;
+}
+
+.detalle .descrip_detalle h3 {
+  font-family: 'Bitter', serif;
+}
+
+.detalle .descrip_detalle p {
+  font-family: 'Bitter', serif;
+  padding-top: 20px;
+}
+
+.detalle .descrip_detalle h4 {
+  font-family: 'Bitter', serif;
+  padding-top: 20px;
+}
+
+.detalle .descrip_detalle li {
+  font-family: 'Bitter', serif;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+.detalle .descrip_detalle .fa-cart-shopping {
+  font-size: 20px;
+  color: #000;
+  vertical-align: middle;
+}
+
+.detalle .descrip_detalle .boton-agregar {
+  margin-top: 30px;
+  margin-left: 5px;
+  padding: 10px 0;
+}
+
+.menu .fa-shopping-cart {
+  font-size: 25px;
+  color: #a7c81f;
+}
+
+.menu .precio {
+  font-family: 'Bitter', serif;
+  font-size: 1.2em;
+}
+
+/* cierre view Detalle */
 
 /* comienzo componente Footer */
 footer {
@@ -200,29 +328,27 @@ footer {
 footer small {
   font-family: 'Bitter', serif;
 }
+
 /* cierre componente Footer */
 
 
-
-
 /* CARRITO DE COMPRAS */
-.cart h2{
+.cart h2 {
   margin: 30px;
 }
 
-.pedido{
+.pedido {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-top: 20px; */
   padding: 0 50px 50px 50px;
 }
 
-.pedido img{
+.pedido img {
   width: 80px;
 }
 
-.pedido button{
+.pedido button {
   width: 40px;
   font-weight: bold;
 }
@@ -231,10 +357,9 @@ footer small {
   text-align: end;
   margin-right: 50px;
   margin-bottom: 50px;
-  
 }
 
-.total_pagar p{
+.total_pagar p {
   font-size: 22px;
   font-weight: bold;
 }

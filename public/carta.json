@@ -1,0 +1,51 @@
+[
+    {
+      "desc": "La pizza napolitana, de masa tierna y delgada pero bordes altos, es la versión propia de la cocina napolitana de la pizza redonda. El término pizza napoletana, por su importancia histórica o regional, se emplea en algunas zonas como sinónimo de pizza tonda.",
+      "id": "P001",
+      "img": "https://images.unsplash.com/photo-1511690078903-71dc5a49f5e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGFjb3MlMjBtZXhpY2Fub3N8ZW58MHwxfDB8fA%3D%3D&auto=format&fit",
+      "ingredients": ["mozzarella", "tomates", "jamón", "orégano"],
+      "name": "Tacos Surtidos",
+      "price": 10490
+    },
+    {
+      "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
+      "id": "P002",
+      "img": "https://images.pexels.com/photos/12097599/pexels-photo-12097599.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "ingredients": ["mozzarella", "tomates", "jamón", "choricillo"],
+      "name": "Enchiladas",
+      "price": 11990
+    },
+    {
+      "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
+      "id": "P003",
+      "img": "https://images.pexels.com/photos/12034452/pexels-photo-12034452.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "ingredients": ["mozzarella", "tomates", "salame", "orégano"],
+      "name": "Tortillas",
+      "price": 9990
+    },
+    {
+      "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
+      "id": "P004",
+      "img": "https://images.unsplash.com/photo-1516535794938-6063878f08cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
+      "ingredients": ["mozzarella", "salame", "aceitunas", "champiñones"],
+      "name": "Tequila Jose Cuervo",
+      "price": 6500
+    },
+    {
+      "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
+      "id": "P005",
+      "img": "https://www.culinaryhill.com/wp-content/uploads/2022/02/Margarita-Culinary-Hill-HR-04.jpg",
+      "ingredients": ["mozzarella", "tomates cherry", "bacon", "orégano"],
+      "name": "Tequila Margarita",
+      "price": 5500
+    },
+    {
+      "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
+      "id": "P006",
+      "img": "https://ep01.epimg.net/elcomidista/imagenes/2012/08/23/receta/1345698000_134569_1345698000_noticia_normal.jpg",
+      "ingredients": ["mozzarella", "pimientos", "pollo grillé", "orégano"],
+      "name": "Michelada",
+      "price": 4500
+    }
+  ]
+  

@@ -20,11 +20,14 @@ const Registrarse = () => {
                 <label for="direccion">Ingrese su dirección</label>
                 <input type="text" id="direccion" placeholder="Escriba su dirección"></input>
 
-                <label for="contraseña">Ingrese la contraseña</label>
+                <label for="contraseña">Ingrese su nueva contraseña</label>
+                <input type="password" id="contraseña" placeholder="Escriba su contraseña"></input>
+
+                <label for="contraseña">Confirme su nueva contraseña</label>
                 <input type="password" id="contraseña" placeholder="Escriba su contraseña"></input>
 
                 <div className="btn-form">
-                    <Link to="/menu"><button className="iniciar-sesion">Registrarme</button></Link>
+                    <Link to="/carta"><button className="iniciar-sesion">Registrarme</button></Link>
                     <Link to="/"><button className="volver">Volver</button></Link>
                 </div>
 

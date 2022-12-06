@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom"
+import {useContext} from 'react'
+import Context from '../context/context.js'
+import {formatearPrecio} from '../utilidades/utilidades.js'
 
-const Menu = () => {
+const Carta = () => {
+    const {carta} = useContext(Context)
+
     return (
+       
         <main>
             <h2>Carta</h2>
             <div className="select">
@@ -12,8 +18,23 @@ const Menu = () => {
                 </select>
             </div>
             <section className="card">
+                {
+                    carta.map((item) => {
+                        return(<article key={item.id} className="tarjeta">
+                        <img src={item.img} alt="Imagen de tacos surtidos"></img>
+                        <h3>{item.name}</h3>
+                        <p> $ {formatearPrecio(item.price)}</p>
+                        <div className="botones-menu">
+                            <Link to="/detalle"><button type="button">Ver Más <i class="fas fa-laugh"></i></button></Link>
+                            <button type="button" className="agregar-carro">Añadir <i className="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </article>)
+                    }
+                    )
+                }
+                
 
-                <article className="tarjeta">
+                {/* <article className="tarjeta">
                     <img src="https://images.unsplash.com/photo-1511690078903-71dc5a49f5e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGFjb3MlMjBtZXhpY2Fub3N8ZW58MHwxfDB8fA%3D%3D&auto=format&fit" alt="Imagen de tacos surtidos"></img>
                     <h3>Tacos Surtidos</h3>
                     <p> $ 10.490</p>
@@ -21,9 +42,9 @@ const Menu = () => {
                         <Link to="/detalle"><button type="button">Ver Más <i class="fas fa-laugh"></i></button></Link>
                         <button type="button" className="agregar-carro">Añadir <i className="fas fa-shopping-cart"></i></button>
                     </div>
-                </article>
+                </article> */}
 
-                <article className="tarjeta">
+                {/* <article className="tarjeta">
                     <img src="https://images.pexels.com/photos/12097599/pexels-photo-12097599.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Imagen de enchiladas"></img>
                     <h3>Enchiladas</h3>
                     <p> $ 11.990</p>
@@ -71,11 +92,11 @@ const Menu = () => {
                         <button type="button">Ver Más <i class="fas fa-laugh"></i></button>
                         <button type="button" className="agregar-carro">Añadir <i className="fas fa-shopping-cart"></i></button>
                     </div>
-                </article>
+                </article> */}
 
             </section>
         </main>
     )
 }
 
-export default Menu
+export default Carta

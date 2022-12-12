@@ -211,20 +211,18 @@ main .card {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 main .card .tarjeta {
   width: 33.3%;
   padding: 0 20px;
-  
 }
 
 .card .tarjeta img {
-  width: 100%;
-  max-width: 400px;
-  height: 350px;
-  box-shadow: 2px 4px 10px #000;
+    width: 100%;
+    max-width: 300px;
+    height: 298px;
+    box-shadow: 2px 4px 10px #000;
 }
 
 .card .tarjeta h3 {
@@ -250,54 +248,65 @@ main .card .tarjeta {
 .tarjeta .botones-menu .agregar-carro:hover {
   background-color: #7f3421;
 }
+
 /* cierre view carta */
 
 /* comienzo view detalle */
-.detalle {
+.detalle-vista {
   display: flex;
-  flex-wrap: nowrap;
-  background-color: #ffebcd;
-  margin: 30px auto;
-  width: 100%;
+  height: 480px;
+  position: relative;
+  border: 3px solid #dbe4ed;
+  border-radius: 12px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  object-fit: contain;
 }
 
-.detalle .img_detalle img {
-  width: 100%;
-  max-width: 1000px;
+.detalle-vista .image {
+  display: block;
+  width: 60%;
+  background-repeat: no-repeat;
+  margin-right: auto;
 }
 
-.detalle .descrip_detalle {
-  padding: 10px 10px;
+.detalle-vista .content {
+  width: 23%;
+  padding: 1rem;
+  margin: 80px;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.detalle .descrip_detalle {
-  padding: 5px 20px;
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.detalle .descrip_detalle h3 {
-  font-family: 'Bitter', serif;
+.detalle-vista h4 {
+  text-transform: capitalize;
+  font-size: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid black;
+  margin-bottom: 1rem;
 }
 
-.detalle .descrip_detalle p {
-  font-family: 'Bitter', serif;
-  padding-top: 20px;
+.detalle-vista p {
+  margin-bottom: 1rem;
 }
 
-.detalle .descrip_detalle h4 {
-  font-family: 'Bitter', serif;
-  padding-top: 20px;
-}
-
-.detalle .descrip_detalle li {
+.detalle-vista .precio {
   font-family: 'Bitter', serif;
   padding-top: 10px;
-  margin-left: 20px;
-}
-
-.detalle .descrip_detalle .fa-cart-shopping {
-  font-size: 20px;
-  color: #000;
-  vertical-align: middle;
+  margin: 20px;
+  font-size: 1em;
 }
 
 .detalle .descrip_detalle .boton-agregar {
@@ -305,17 +314,6 @@ main .card .tarjeta {
   margin-left: 5px;
   padding: 10px 0;
 }
-
-.menu .fa-shopping-cart {
-  font-size: 25px;
-  color: #a7c81f;
-}
-
-.menu .precio {
-  font-family: 'Bitter', serif;
-  font-size: 1.2em;
-}
-
 /* cierre view Detalle */
 
 /* comienzo componente Footer */
@@ -331,6 +329,7 @@ footer {
 footer small {
   font-family: 'Bitter', serif;
 }
+
 /* cierre componente Footer */
 
 
@@ -402,10 +401,43 @@ footer small {
   padding-bottom: 15px;
   font-family: 'Bitter', sans-serif;
 }
+
 /* cierre componente Pedido */
 
 /* comienzo view Carro */
 .carrito {
   background-color: #ffebcd;
   margin: 30px auto;
+}
+
+/* NotFound */
+.not-found {
+  text-align: center;
+  font-size: 40px;
+  padding: 4rem;
+}
+
+.btn_nf {
+  font-size: 16px;
+  text-decoration: none;
+  font-family: 'Bitter', serif;
+  padding: 10px 10px;
+  background-color: #a7c81f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 15px;
+  transition: all 0.5s;
+}
+
+/* Vista de página pagar */
+.pago {
+  text-align: center;
+  padding: 4.5rem;
+}
+
+.pago i {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  display: inline-block;
 }

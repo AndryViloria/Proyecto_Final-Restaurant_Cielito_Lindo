@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import Context from '../context/context.js'
 import { useLocation } from 'react-router-dom'//Hook que sirve para saber las rutas
 
 const Navbar = () => {
+    const {carroTotal} = useContext(Context)
+
     const location = useLocation()//crear variable location para ejecutar useLocation
     console.log(location.pathname);//obtengo la ruta 
     return (
@@ -18,9 +22,9 @@ const Navbar = () => {
                     <Link to="/iniciar"><button>Iniciar Sesión</button></Link>
                 </div>}
 
-                {/* si si location.pathname es estrictamente igual a la vista carta, detalle y cart muestra un carrito */}
+                {/* si si location.pathname es estrictamente igual a la vista carta, detalle y pedido muestra un carrito */}
                 {(location.pathname === "/carta" || location.pathname.startsWith('/detalle') || location.pathname === '/pedido') &&
-                    <p className='precio'><Link to="/pedido"><i className="fas fa-shopping-cart"> </i></Link> $</p>
+                    <p className='precio'><Link to="/carro"><i className="fas fa-shopping-cart"> </i></Link> ${carroTotal()}</p>
                 }
             </nav>
 

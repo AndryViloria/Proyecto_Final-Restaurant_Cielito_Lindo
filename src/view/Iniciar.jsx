@@ -1,27 +1,55 @@
-import { Link } from "react-router-dom"
-import { useState } from 'react'
+import { useState } from "react"
+import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Iniciar = () => {
-const [correo, setCorreo] = useState('')
-const [pass, setPass] = useState('')
+const navigate = useNavigate()
+
+const [correo, setCorreo] = useState('');
+const [contraseña, setContraseña] = useState('')
+const [error, setError] = useState(false)
+
+//array de objetos 
+const correoContraseña = [
+    {
+        email: 'travisbarker@blink182.com',
+        pass: 'tutupatutupa',
+    },
+    {
+        email: 'synystergates@avengedsevenfold.com', 
+        pass: 'sofaraway'
+    }
+]
+ 
+//Función Login
+const login = (e) => {
+    e.preventDefault()
+    if(correo === correoContraseña[0].email && contraseña === correoContraseña[0].pass || correo === correoContraseña[1].email && contraseña === correoContraseña[1].pass  ){
+        localStorage.setItem('token', 'test_token_123456')
+        navigate('/carta')
+    }else {
+        setError(true)
+    }
+}
     return (
         <main>
             <h2>Iniciar Sesión</h2>
-            <form>
+            <form onSubmit={(e) => login(e)}>
                 <label for="correo">Ingrese su correo electrónico</label>
-                <input setCorreo={setCorreo} type="email" id="correo" placeholder="ejemplo@correo.com"></input>
+
+                <input type="email" id="correo" onChange={(e) => setCorreo(e.target.value)} placeholder="ejemplo@correo.com"></input>
  
                 <label for="contraseña">Ingrese la contraseña</label>
-                <input setPass={setPass} type="password" id="contraseña" placeholder="Contraseña"></input>
+
+                <input type="password" id="contraseña" onChange={(e)=> setContraseña(e.target.value)} placeholder="Contraseña"></input>
 
                 <div className="btn-form">
-                    <Link to="/carta"><button className="iniciar-sesion">Iniciar Sesión</button></Link>
-                    <Link to="/"><button className="volver">Volver</button></Link>
+                    <button className="iniciar-sesion">Iniciar Sesión</button>
+                    <NavLink to='/'><button className="volver">Volver</button></NavLink>
                 </div>
 
-                <p>¿Aún no tienes cuenta? <Link to="/registrarse"><span>Registrate</span></Link></p>
+                {error && <p>Correo o contraseña incorrecta</p> }
 
-                {correo && pass === '252525'}
             </form>
         </main>
     )

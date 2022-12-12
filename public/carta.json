@@ -1,51 +1,92 @@
 [
     {
-      "desc": "La pizza napolitana, de masa tierna y delgada pero bordes altos, es la versión propia de la cocina napolitana de la pizza redonda. El término pizza napoletana, por su importancia histórica o regional, se emplea en algunas zonas como sinónimo de pizza tonda.",
-      "id": "P001",
-      "img": "https://images.unsplash.com/photo-1511690078903-71dc5a49f5e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGFjb3MlMjBtZXhpY2Fub3N8ZW58MHwxfDB8fA%3D%3D&auto=format&fit",
-      "ingredients": ["mozzarella", "tomates", "jamón", "orégano"],
-      "name": "Tacos Surtidos",
-      "price": 10490
+        "desc": "El taco es una tortilla de maíz, que se enrolla y contiene diversos ingredientes y algún tipo de salsa.",
+        "id": "P001",
+        "img": "https://images.unsplash.com/photo-1618414466256-4b62f39b5b30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=578&q=80",
+        "ingredients": [
+            "Tostadas",
+            "Palta",
+            "Choclo",
+            "Poroto negro",
+            "Carne, pollo y chorizo"
+            ],
+        "name": "Tacos",
+        "price": 10490,
+        "type": "Comidas"
     },
     {
-      "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
-      "id": "P002",
-      "img": "https://images.pexels.com/photos/12097599/pexels-photo-12097599.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "ingredients": ["mozzarella", "tomates", "jamón", "choricillo"],
-      "name": "Enchiladas",
-      "price": 11990
+        "desc": "Las enchiladas se elabora con tortilla de maíz, bañada en una salsa picante ya que utiliza chile en su preparación están rellenas de pollo, deshebrado con papa, queso y picadillo.",
+        "id": "P002",
+        "img": "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+        "ingredients": [
+            "Tortilla de maíz",
+            "Chile",
+            "Nata",
+            "Jitomate",
+            "Pollo"
+        ],
+        "name": "Enchiladas",
+        "price": 11990,
+        "type": "Comidas"
     },
     {
-      "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
-      "id": "P003",
-      "img": "https://images.pexels.com/photos/12034452/pexels-photo-12034452.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "ingredients": ["mozzarella", "tomates", "salame", "orégano"],
-      "name": "Tortillas",
-      "price": 9990
+        "desc": "La tortilla mexicana es el símbolo y la tradición más antigua de la cocina mexicana.",
+        "id": "P003",
+        "img": "https://images.unsplash.com/photo-1613591797540-862e54975da8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+        "ingredients": [
+            "Tortilla de maíz",
+            "Guacamole",
+            "Choclo",
+            "Chile",
+            "Cebolla",
+            "Tomate"
+        ],
+        "name": "Tortillas",
+        "price": 9990,
+        "type": "Comidas"
     },
     {
-      "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
-      "id": "P004",
-      "img": "https://images.unsplash.com/photo-1516535794938-6063878f08cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
-      "ingredients": ["mozzarella", "salame", "aceitunas", "champiñones"],
-      "name": "Tequila Jose Cuervo",
-      "price": 6500
+        "desc": "El tequila margarita se distingue de entre otros cócteles, por su sabor cítrico mezclado con tequila y hielo en escarcha.",
+        "id": "P004",
+        "img": "https://i0.wp.com/osojimix.com/wp-content/uploads/2021/06/MARGARITA.jpg?w=500&ssl=1",
+        "ingredients": [
+            "Tequila",
+            "Licor de naranja",
+            "Limón",
+            "azucar",
+            "Hielo"
+        ],
+        "name": "Tequila Margarita",
+        "price": 6500, 
+        "type": "Tragos"
     },
     {
-      "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
-      "id": "P005",
-      "img": "https://www.culinaryhill.com/wp-content/uploads/2022/02/Margarita-Culinary-Hill-HR-04.jpg",
-      "ingredients": ["mozzarella", "tomates cherry", "bacon", "orégano"],
-      "name": "Tequila Margarita",
-      "price": 5500
+        "desc": "Receta mexicana que obtiene su nombre por la mezcla de granadina junto al jugo de naranja y el tequila, que le dan unos tonos muy parecidos a un amanecer.",
+        "id": "P005",
+        "img": "https://img-global.cpcdn.com/recipes/e6f3add576f0de5e/680x482cq70/receta-de-bebida-tequila-sunrise-foto-principal.webp",
+        "ingredients": [
+            "Jugo natural de naranja",
+            "Tequila",
+            "Granadina",
+            "Hielo",
+            "Naranjas para decorar"
+        ],
+        "name": "Tequila Sunrise",
+        "price": 5500,
+        "type": "Tragos"
     },
     {
-      "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
-      "id": "P006",
-      "img": "https://ep01.epimg.net/elcomidista/imagenes/2012/08/23/receta/1345698000_134569_1345698000_noticia_normal.jpg",
-      "ingredients": ["mozzarella", "pimientos", "pollo grillé", "orégano"],
-      "name": "Michelada",
-      "price": 4500
+        "desc": "El tequila es una de las bebidas emblemáticas de México, que es obtenida del agave azul.",
+        "id": "P006",
+        "img": "https://elfuerte.com.mx/wp-content/uploads/2022/07/Tequila-2.jpg",
+
+        "ingredients": [
+            "Tequila",
+            "Limón",
+            "Sal"
+            ],
+        "name": "Tequila ",
+        "price": 4500,
+        "type": "Tragos"
     }
-  ]
-  
+]

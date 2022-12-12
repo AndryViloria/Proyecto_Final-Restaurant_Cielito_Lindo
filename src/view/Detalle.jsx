@@ -1,44 +1,57 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
+import { useParams } from "react-router-dom" //Hoot para leer los id de los productos de la pagina
+import { useContext, useState, useEffect } from "react"
+import Context from "../context/context.js"
 
+import Ingredients from "../components/Ingredients.jsx"
+import { formatearPrecio } from "../utilidades/utilidades.js"
 
 const Detalle = () => {
-    
+    //1. capturar el id de los productos de la carta desde los parametros
+    const { id } = useParams()
+
+    //2. Traer el listado completo de los productos para despues ser filtrados
+    const { carta, addToCarro } = useContext(Context)
+
+    const [detalle, setDetalle] = useState({ingredients: [], price:0})
+
+    useEffect(() => {
+        const detalle = carta.filter((item) => item.id === id)
+        setDetalle(detalle[0])
+       
+    }, [])
+
     return (
-    
         <main>
             <h2>Detalle del producto</h2>
-            <section className="detalle">
-                {<article className="img_detalle">
-                    <img src="https://images.unsplash.com/photo-1511690078903-71dc5a49f5e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGFjb3MlMjBtZXhpY2Fub3N8ZW58MHwxfDB8fA%3D%3D&auto=format&fit" alt="Imagen de tacos surtidos"></img>
+            <div className="detalle-vista">
+                <section className="image" style={{backgroundImage: `url(${detalle.img})`}}>
+                </section>
+
+                <article className="content">
+                    <h3>{detalle.name}</h3>
+                   
+                    <p className="desc">{detalle.desc}</p>
+
+                    <Ingredients ingredients={detalle.ingredients}></Ingredients>
+
+                    <div className="precio">
+                        {/* <h3>Precio: ${detalle.price}</h3> */}
+
+                        <h3>Precio: ${formatearPrecio(detalle.price)}</h3>
+
+                        <div className="button">
+                            <button className="button" onClick={() => addToCarro(detalle)}>Añadir <i className="fas fa-shopping-cart"></i></button>
+
+                            <Link to="/Carta"><button>Volver a Carta</button></Link>
+                        </div>
+                    </div>
                 </article>
-                }
-                
 
-                <article className="descrip_detalle">
-                    <h3> Tacos Surtidos - $ 10.490</h3>
-                    <p>El taco es una preparación culinaria muy popular de
-                        México que consiste en una tortilla, generalmente de maíz,
-                        que comúnmente se enrolla para contener dentro diversos
-                        ingredientes y algún tipo de salsa. Es el antojo más
-                        representativo de la cocina mexicana.</p>
-                    
-
-                    <h4>Ingredientes:</h4>
-                    <ul>
-                        <li>Tostadas</li>
-                        <li>Palta</li>
-                        <li>Choclo</li>
-                        <li>Poroto Negro</li>
-                        <li>Carne, pollo y chorizo</li>
-                        <li>Cilantro, cebolla y limón</li>
-                    </ul>
-
-                    <Link to="/pedido"><button className="boton-agregar">Agregar <i className="fas fa-shopping-cart"></i></button></Link>
-
-                </article>
-            </section>
+            </div>
         </main>
     )
 }
 
 export default Detalle
+

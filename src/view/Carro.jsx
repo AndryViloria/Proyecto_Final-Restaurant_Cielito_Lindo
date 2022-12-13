@@ -1,22 +1,22 @@
 import Pedido from "../components/Pedido.jsx"
 import { useContext } from "react"
 import Context from "../context/context.js"
+import { Link } from "react-router-dom"
 
 const Carro = () => {
     const { carro, addToCarro, removeFromCarro, carroTotal } = useContext(Context)
 
     return (
         <main>
-            <div className="carrito">
-                {
-                    carro.length !== 0 ?
+            <div className="carro-vacio">
+                {carro.length !== 0 ? (
                         <Pedido carro={carro}
                             addToCarro={addToCarro}
                             removeFromCarro={removeFromCarro}
                             carroTotal={carroTotal}>
                         </Pedido>
-                        : <p className="carroVacio">No hay elementos seleccionados en el carrito</p>
-                }
+                       ) :( <p>No hay productos seleccionados en el carrito</p>
+                )}
             </div>
         </main>
     )

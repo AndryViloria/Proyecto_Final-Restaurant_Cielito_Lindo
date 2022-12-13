@@ -2,7 +2,7 @@
     {
         "desc": "El taco es una tortilla de maíz, que se enrolla y contiene diversos ingredientes y algún tipo de salsa.",
         "id": "P001",
-        "img": "https://images.unsplash.com/photo-1618414466256-4b62f39b5b30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=578&q=80",
+        "img": "https://images.pexels.com/photos/4958792/pexels-photo-4958792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "ingredients": [
             "Tostadas",
             "Palta",
@@ -15,9 +15,9 @@
         "type": "Comidas"
     },
     {
-        "desc": "Las enchiladas se elabora con tortilla de maíz, bañada en una salsa picante ya que utiliza chile en su preparación están rellenas de pollo, deshebrado con papa, queso y picadillo.",
+        "desc": "Las enchiladas se elaboran con tortilla de maíz, bañada en una salsa picante, al utilizar chile en su preparación están rellenas de pollo, deshebrado con papa, queso y picadillo.",
         "id": "P002",
-        "img": "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+        "img": "https://images.pexels.com/photos/9772454/pexels-photo-9772454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "ingredients": [
             "Tortilla de maíz",
             "Chile",
@@ -32,7 +32,7 @@
     {
         "desc": "La tortilla mexicana es el símbolo y la tradición más antigua de la cocina mexicana.",
         "id": "P003",
-        "img": "https://images.unsplash.com/photo-1613591797540-862e54975da8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+        "img": "https://images.pexels.com/photos/7613555/pexels-photo-7613555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "ingredients": [
             "Tortilla de maíz",
             "Guacamole",
@@ -46,9 +46,9 @@
         "type": "Comidas"
     },
     {
-        "desc": "El tequila margarita se distingue de entre otros cócteles, por su sabor cítrico mezclado con tequila y hielo en escarcha.",
+        "desc": "El tequila margarita se distingue entre otros cócteles por su sabor cítrico mezclado con tequila y hielo en escarcha.",
         "id": "P004",
-        "img": "https://i0.wp.com/osojimix.com/wp-content/uploads/2021/06/MARGARITA.jpg?w=500&ssl=1",
+        "img": "https://images.pexels.com/photos/2480828/pexels-photo-2480828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "ingredients": [
             "Tequila",
             "Licor de naranja",
@@ -63,7 +63,7 @@
     {
         "desc": "Receta mexicana que obtiene su nombre por la mezcla de granadina junto al jugo de naranja y el tequila, que le dan unos tonos muy parecidos a un amanecer.",
         "id": "P005",
-        "img": "https://img-global.cpcdn.com/recipes/e6f3add576f0de5e/680x482cq70/receta-de-bebida-tequila-sunrise-foto-principal.webp",
+        "img": "https://images.pexels.com/photos/4753648/pexels-photo-4753648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "ingredients": [
             "Jugo natural de naranja",
             "Tequila",
@@ -78,7 +78,7 @@
     {
         "desc": "El tequila es una de las bebidas emblemáticas de México, que es obtenida del agave azul.",
         "id": "P006",
-        "img": "https://elfuerte.com.mx/wp-content/uploads/2022/07/Tequila-2.jpg",
+        "img": "https://images.pexels.com/photos/6554949/pexels-photo-6554949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 
         "ingredients": [
             "Tequila",

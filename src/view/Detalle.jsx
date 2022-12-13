@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useParams } from "react-router-dom" //Hoot para leer los id de los productos de la pagina
+import { useParams } from "react-router-dom" //Hook para leer los id de los productos de la pagina
 import { useContext, useState, useEffect } from "react"
 import Context from "../context/context.js"
 
@@ -24,31 +24,26 @@ const Detalle = () => {
     return (
         <main>
             <h2>Detalle del producto</h2>
-            <div className="detalle-vista">
-                <section className="image" style={{backgroundImage: `url(${detalle.img})`}}>
-                </section>
-
-                <article className="content">
-                    <h3>{detalle.name}</h3>
-                   
-                    <p className="desc">{detalle.desc}</p>
-
-                    <Ingredients ingredients={detalle.ingredients}></Ingredients>
-
-                    <div className="precio">
-                        {/* <h3>Precio: ${detalle.price}</h3> */}
-
-                        <h3>Precio: ${formatearPrecio(detalle.price)}</h3>
-
-                        <div className="button">
-                            <button className="button" onClick={() => addToCarro(detalle)}>Añadir <i className="fas fa-shopping-cart"></i></button>
-
-                            <Link to="/Carta"><button>Volver a Carta</button></Link>
-                        </div>
-                    </div>
+            <section className="detalle-vista">
+                <article className="imagen" style={{backgroundImage: `url(${detalle.img})`}}>
                 </article>
 
-            </div>
+                <article className="contenido">
+                    <h3>{detalle.name} - Precio ${formatearPrecio(detalle.price)}</h3>
+                   
+                    <p>{detalle.desc}</p>
+
+                    <Ingredients ingredients={detalle.ingredients}></Ingredients>
+                       
+                        <div className="botones-detalle">
+                            <button onClick={() => addToCarro(detalle)}>Agregar <i className="fas fa-shopping-cart"></i></button>
+
+                            <Link to="/Carta"><button className='volver-carta'>Volver a Carta</button></Link>
+                        </div>
+                    
+                </article>
+
+            </section>
         </main>
     )
 }

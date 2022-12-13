@@ -2,37 +2,46 @@ import { formatearPrecio } from '../utilidades/utilidades.js'
 import { Link } from 'react-router-dom'
 
 const Pedido = ({ carro, addToCarro, removeFromCarro, carroTotal }) => {
-    return (
-        <main>
+return (
+    <main>
+        <div className='titulo-h2'>
             <h2>Detalle de la compra</h2>
-            <div>
-                <ul>
-                    {
-                        carro.map((item) => {
-                            return (
-                                <li key={item.id}>
-                                    <div className="product">
+        </div>
+        <section className="detalle-compra">
+            <ul>
+            {/* recorrer el array con el método.map para mostrarme el detalle de cada producto  */}
+            {
+                carro.map((item) => {
+                    return (
+                        <div className='pedido'>
+                            <li key={item.id}>
+                                <article className='detalle-producto'>
+                                    <div className="producto">
                                         <img src={item.img} alt={item.name} />
-                                        <h4>{item.name}</h4>
+                                        <h3>{item.name}</h3>
                                     </div>
-                                    <div className="price">
-                                        <h4>$ {formatearPrecio(item.price * item.count)}</h4>
-                                    </div>
-                                    <div className="btns">
+                                    
+                                    <div className="botones-pedido">
+                                        <p>$ {formatearPrecio(item.price * item.count)}</p>
                                         <button className="agregar-disminuir button" onClick={() => removeFromCarro(item)}>-</button>
                                         <p className="bold">{item.count}</p>
-                                        <button className="agregar-disminuir button" onClick={() => addToCarro(item)}>+</button>
+                                        <button className="agregar-disminuir button" onClick={() =>  addToCarro(item)}>+</button>
                                     </div>
+                                </article>
+                                     
                                 </li>
-                            )
-                        })
-                    }
-                </ul>
-                <div className="total">
-                    <h3>Total: $ {carroTotal()} </h3>
-                    <Link to="/pagar" className="button">Ir a pagar</Link>
-                </div>
-            </div>
+                                </div>
+                               )
+                            })
+                        }
+                        </ul>
+                        
+                        <div className="total">
+                            <h4>Total: $ {carroTotal()} </h4>
+                            <Link to="/pagar" className="pagar">Ir a pagar</Link>
+                        </div>
+                            
+            </section> 
         </main>
     )
 }

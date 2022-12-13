@@ -1,11 +1,11 @@
 import './App.css'
+//importar rutas
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import Context from './context/context.js'
+import { useState, useEffect } from 'react'//importar hooks
+import Context from './context/context.js'//importar context
 
 //componentes
 import Navbar from './components/Navbar.jsx'
-import Pedido from './components/Pedido.jsx'
 import Footer from './components/Footer.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 
@@ -18,19 +18,21 @@ import NotFound from './view/NotFound.jsx'
 import Detalle from './view/Detalle.jsx'
 import Iniciar from './view/Iniciar.jsx'
 
+//importar función formatearPrecio que está dentro del archivo utilidades.js
 import { formatearPrecio } from './utilidades/utilidades.js'
 
 function App() {
+  //crear variables y setter setCarta y setCarro para modificar los elementos
   const [carta, setCarta] = useState([])
   const [carro, setCarro] = useState([])
 
-  //Agregar al carro
+  //función agregar al carro
   const addToCarro = (item) => {
     //determinar si el carro tiene el producto que quiero agregar
     const itemIndex = carro.findIndex((producto) => producto.id === item.id)
     const updateCarro = [...carro]
 
-    //si el carro no tiene el producto
+    //realizar una condicional if para saber si el carro no tiene el producto
     if (itemIndex === -1) {
       const producto = {
         id: item.id,
@@ -72,6 +74,7 @@ function App() {
     return formatearPrecio(total)
   }
 
+  //ocupar hook useEffect para llamar a la ruta de carta.json y hacer la petición
   useEffect(() => {
     fetch('/carta.json')
       .then((res) => res.json())
@@ -79,13 +82,16 @@ function App() {
       .catch((error) => console.log(error))
   }, [])
 
+  //realizar un globalState
   const globalState = { carta, carro, addToCarro, removeFromCarro, carroTotal }
 
   return (
     <div className="App">
+      {/* rutas */}
       <Context.Provider value={globalState}>
         <BrowserRouter>
           <Navbar></Navbar>
+          {/* proteger página iniciar */}
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path='/iniciar' element={<Iniciar />}></Route>
@@ -98,7 +104,7 @@ function App() {
 
             <Route path='/carta' element={<Carta />}></Route>
             <Route path='/detalle/:id' element={<Detalle />}></Route>
-            <Route path='/pedido' element={<Pedido />}></Route>
+           
             <Route path='/carro' element={<Carro />}></Route>
             <Route path='/pagar' element={<Pagar />}></Route>
             <Route path='*' element={<NotFound />}></Route>

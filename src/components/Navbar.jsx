@@ -23,7 +23,7 @@ const Navbar = () => {
                 </div>}
 
                 {/* si si location.pathname es estrictamente igual a la vista carta, detalle y pedido muestra un carrito */}
-                {(location.pathname === "/carta" || location.pathname.startsWith('/detalle') || location.pathname === '/pedido') &&
+                {(location.pathname === "/carta" || location.pathname.startsWith('/detalle') || location.pathname === '/carro') &&
                     <p className='precio'><Link to="/carro"><i className="fas fa-shopping-cart"> </i></Link> ${carroTotal()}</p>
                 }
             </nav>

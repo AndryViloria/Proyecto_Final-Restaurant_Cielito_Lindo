@@ -50,9 +50,144 @@ button:hover {
   text-decoration: underline;
 }
 
+header .fa-shopping-cart {
+  font-size: 25px;
+  color:#a7c81f;
+}
+
+.cerrar-sesion {
+  background-color: #a5432a;
+}
+
+.cerrar-sesion:hover {
+  background-color: #7f3421;
+}
+
+header p {
+  font-family: 'Bitter', serif;
+}
 /* cierre componente Navbar */
 
-/* comienzo view Home */
+/* comiezo componente Pedido */
+.titulo-h2 {
+  background-color: #fff;
+  padding-bottom: 30px;
+ 
+}
+.detalle-compra {
+  margin: 30px auto;
+}
+
+.detalle-compra .pedido {
+  width: 100%;
+}
+
+.detalle-compra .pedido .detalle-producto{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ .detalle-compra .pedido li {
+  list-style: none;
+}
+
+ .pedido .detalle-producto .producto {
+  display: flex;
+  align-items: center;
+}
+
+ .pedido .detalle-producto .producto img {
+  width: 100%;
+  max-width: 125px;
+  padding: 20px 10px;
+}
+
+.pedido .detalle-producto .producto h3 {
+  font-family: 'Bitter', serif;
+}
+
+.pedido .detalle-producto .botones-pedido {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+ .pedido .detalle-producto .botones-pedido p {
+  font-family: 'Bitter', serif;
+}
+
+.pedido .detalle-producto .botones-pedido .agregar-disminuir {
+  font-family: 'Bitter', serif;
+  width: 40px;
+  font-size: 1.2em;
+  font-weight: 500;
+  background-color: #a7c81f;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.botones-pedido .numero-centrado {
+  padding: 0;
+}
+
+.pedido .detalle-producto .botones-pedido .agregar-disminuir span {
+  font-family: 'Bitter', serif;
+}
+
+ .detalle-compra .total {
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+ .detalle-compra .total h4{
+  font-family: 'Bitter', serif;
+  padding-right: 15px;
+}
+
+ .detalle-compra .total .pagar{
+  font-family: 'Bitter', serif;
+  font-weight: 500;
+  color: #000;
+  margin: 5px 0;
+  padding-right: 15px;
+  text-decoration: underline;
+}
+
+.detalle-compra .total .pagar:hover{
+  text-decoration: none;
+}
+/* cierre componente Pedido */
+
+/* comiento componente Ingredientes */
+.ingredientes h4 {
+  font-family: 'Bitter', serif;
+  padding-top: 20px;
+}
+
+.ingredientes li {
+  font-family: 'Bitter', serif;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+/* cierre componente ingredientes */
+
+/* comienzo componente Footer */
+footer {
+  border-top: 1px solid #a7c81f;
+  width: 100%;
+  min-height: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer small {
+  font-family: 'Bitter', serif;
+
+}
+/* cierre componente Footer */
+
+/* comienzo vista Home */
 .img_fondo {
   background-image: url(./assets/background.jpg);
   background-size: cover;
@@ -79,10 +214,9 @@ button:hover {
   font-size: 2.5em;
   text-shadow: 2px 2px 1px #000;
 }
+/* cierre vista Home */
 
-/* cierre view Home */
-
-/* comienzo view Iniciar, Registrarse */
+/* comienzo vista Iniciar, Registrarse */
 main {
   width: 100%;
   max-width: 992px;
@@ -187,8 +321,9 @@ form textarea {
   border-radius: 5px;
   border: 1px solid #9e9e9e;
 }
+/* cierre vista iniciar */
 
-/* comiezo de view Carta */
+/* comiezo de vista Carta */
 main .select {
   display: flex;
   justify-content: center;
@@ -216,13 +351,13 @@ main .card {
 main .card .tarjeta {
   width: 33.3%;
   padding: 0 20px;
+  margin-top: 20px;
 }
 
 .card .tarjeta img {
     width: 100%;
     max-width: 300px;
-    height: 298px;
-    box-shadow: 2px 4px 10px #000;
+    box-shadow: 2px 4px 10px #000;
 }
 
 .card .tarjeta h3 {
@@ -237,187 +372,100 @@ main .card .tarjeta {
   font-weight: 500;
 }
 
-.tarjeta .botones-menu {
+.tarjeta .botones-carta {
   margin: 20px 0;
 }
 
-.tarjeta .botones-menu .agregar-carro {
+.tarjeta .botones-carta .agregar-carro {
   background-color: #a5432a;
 }
 
-.tarjeta .botones-menu .agregar-carro:hover {
+.tarjeta .botones-carta .agregar-carro:hover {
   background-color: #7f3421;
 }
+/* cierre vista carta */
 
-/* cierre view carta */
-
-/* comienzo view detalle */
+/* comienzo vista detalle */
 .detalle-vista {
+  width: 100%;
   display: flex;
-  height: 480px;
-  position: relative;
-  border: 3px solid #dbe4ed;
-  border-radius: 12px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-  object-fit: contain;
+  margin: 30px 0;
+  background-color: #ffebcd;
 }
 
-.detalle-vista .image {
-  display: block;
-  width: 60%;
+.detalle-vista .imagen {
+  width:40%;
+  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
-  margin-right: auto;
 }
 
-.detalle-vista .content {
-  width: 23%;
-  padding: 1rem;
-  margin: 80px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.button {
+.detalle-vista .contenido {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  padding-left: 20px;
+}
+
+.detalle-vista .contenido h3 {
+  text-transform: capitalize;
+  font-family: 'Bitter', sans-serif;
+  padding-top: 5px;
+}
+
+.detalle-vista .contenido p {
+  font-family: 'Bitter', sans-serif;
+  font-size: 1em;
+  padding-top: 20px;
+}
+
+.botones-detalle {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  width: 60px;
   cursor: pointer;
-  border-radius: 4px;
   text-decoration: none;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.detalle-vista h4 {
-  text-transform: capitalize;
-  font-size: 1rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 2px solid black;
-  margin-bottom: 1rem;
+.botones-detalle .volver-carta{
+  background-color: #a5432a;
 }
 
-.detalle-vista p {
-  margin-bottom: 1rem;
+.botones-detalle .volver-carta:hover{
+  background-color: #7f3421;
 }
+/* cierre vista Detalle */
 
-.detalle-vista .precio {
-  font-family: 'Bitter', serif;
-  padding-top: 10px;
-  margin: 20px;
-  font-size: 1em;
-}
-
-.detalle .descrip_detalle .boton-agregar {
-  margin-top: 30px;
-  margin-left: 5px;
-  padding: 10px 0;
-}
-/* cierre view Detalle */
-
-/* comienzo componente Footer */
-footer {
-  border-top: 1px solid #a7c81f;
-  background-color: #fff;
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  /* min-height: 100vh; */
-}
-
-footer small {
-  font-family: 'Bitter', serif;
-}
-
-/* cierre componente Footer */
-
-
-/* comiezo componente Pedido */
-.cart {
+/* comienzo vista Carro */
+.carro-vacio {
   background-color: #ffebcd;
-  margin: 30px auto;
 }
 
-.cart .detalle-pedido {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.cart .pedido {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: 20px;
-  margin-top: 30px;
-}
-
-.cart .pedido h3 {
+.carro-vacio p {
   font-family: 'Bitter', sans-serif;
   padding-left: 10px;
 }
+/* cierre vista Carro */
 
-.pedido img {
-  width: 100%;
-  max-width: 120px;
-}
-
-.cart .agregar-disminuir {
-  width: 30%;
-  margin-right: 20px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.cart .agregar-disminuir p {
-  font-family: 'Bitter', sans-serif;
-  font-weight: 500;
-}
-
-.cart .agregar-disminuir span {
-  font-family: 'Bitter', sans-serif;
-  font-weight: 500;
-  padding-left: 10px;
-}
-
-.cart .agregar-disminuir button {
-  width: 40px;
-  font-size: 1.2em;
-  font-weight: 500;
-  background-color: #a7c81f;
-  text-decoration: none;
-}
-
-.cart .total_pagar {
-  text-align: right;
-  width: 100%;
-}
-
-.cart .total_pagar h4 {
-  padding-right: 20px;
-  padding-bottom: 15px;
-  font-family: 'Bitter', sans-serif;
-}
-
-/* cierre componente Pedido */
-
-/* comienzo view Carro */
-.carrito {
-  background-color: #ffebcd;
-  margin: 30px auto;
-}
-
-/* NotFound */
+/* comienzo vista NotFound */
 .not-found {
   text-align: center;
   font-size: 40px;
-  padding: 4rem;
+  padding: 20px 0;
+  background-color: #ffebcd;
+  margin: 30px auto;
 }
 
-.btn_nf {
+.not-found h3{
+  text-align: center;
+  font-family: 'Bitter', serif;
+}
+
+.not-found .btn_nf {
   font-size: 16px;
   text-decoration: none;
   font-family: 'Bitter', serif;
@@ -426,18 +474,24 @@ footer small {
   color: white;
   border: none;
   border-radius: 4px;
-  margin-left: 15px;
   transition: all 0.5s;
 }
+/* cierre página not-found */
 
 /* Vista de página pagar */
 .pago {
   text-align: center;
-  padding: 4.5rem;
+  margin: 30px auto;
+  padding: 20px 0;
+  background-color: #ffebcd;
 }
 
 .pago i {
-  font-size: 5rem;
-  margin-bottom: 3rem;
-  display: inline-block;
+  font-size: 100px;
 }
+
+.pago h3 {
+  text-align: center;
+  font-family: 'Bitter', serif;
+}
+/* cierre vista página pagar */

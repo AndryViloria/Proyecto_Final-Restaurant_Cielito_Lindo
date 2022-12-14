@@ -38,7 +38,7 @@ const Detalle = () => {
                         <div className="botones-detalle">
                             <button onClick={() => addToCarro(detalle)}>Agregar <i className="fas fa-shopping-cart"></i></button>
 
-                            <Link to="/Carta"><button className='volver-carta'>Volver a Carta</button></Link>
+                            <Link to="/carta"><button className='volver-carta'>Volver a Carta</button></Link>
                         </div>
                     
                 </article>

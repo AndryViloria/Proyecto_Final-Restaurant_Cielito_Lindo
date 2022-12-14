@@ -9,6 +9,7 @@ const Carro = () => {
     return (
         <main>
             <div className="carro-vacio">
+                {/* Usamos un condicional que quiere decir que si hay elementos carge pedido sino que muestre el mensaje. En pedido pasamos la promt pasando el listado*/}
                 {carro.length !== 0 ? (
                         <Pedido carro={carro}
                             addToCarro={addToCarro}

@@ -4,16 +4,19 @@ import Context from '../context/context.js'
 import { formatearPrecio } from '../utilidades/utilidades.js'
 import { useState, useEffect } from "react";
 
+
 const Carta = (e) => {
     const { carta, addToCarro } = useContext(Context)
     const navigate = useNavigate()
 
     const detalleCarta = (id) => navigate(`/detalle/${id}`)
 
+    //hacer useState para modificar los elementos a través de una condicional y ocupando filter para poder filtrar la categoria de productos realizado con un select
     const [filtro, setFiltro] = useState("Todos");
     const [cartaMostrada, setCartaMostrada] = useState(carta);
 
     useEffect(() => {
+        //hacer filtro de carta que me muestre todos los productos
         if (filtro === "Todos") {
             setCartaMostrada(carta);
         } else if (filtro === "Comidas") {
@@ -56,13 +59,14 @@ const Carta = (e) => {
                 </select>
             </div>
             <section className="card">
+                {/* método map para mostrar a través de un recorrido los productos de la página carta */}
                 {
                     cartaMostrada.map((item) => {
                         return (<article key={item.id} className="tarjeta">
                             <img src={item.img} alt="Imagen de tacos surtidos"></img>
                             <h3>{item.name}</h3>
                             <p> $ {formatearPrecio(item.price)}</p>
-                            <div className="botones-menu">
+                            <div className="botones-carta">
                                 <button type="button" onClick={() => detalleCarta(item.id)}>Ver Más <i class="fas fa-laugh"></i></button>
                                 <button type="button" className="agregar-carro" onClick={() => addToCarro(item)}>Añadir <i className="fas fa-shopping-cart"></i></button>
                             </div>

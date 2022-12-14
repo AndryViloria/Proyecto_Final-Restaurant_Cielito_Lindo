@@ -1,13 +1,24 @@
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import Context from '../context/context.js'
 import { useLocation } from 'react-router-dom'//Hook que sirve para saber las rutas
 
 const Navbar = () => {
+    const navigate = useNavigate()
     const {carroTotal} = useContext(Context)
 
+    /* crear variable token para traer lo que existe en el localstorage(cache) con el nombre token */
+    const token = localStorage.getItem('token')
+
+    //función cerrarSesion
+    const cerrarSesion = () =>{
+    localStorage.removeItem('token')//borrar token del cache
+    navigate('/') 
+}
+
     const location = useLocation()//crear variable location para ejecutar useLocation
-    console.log(location.pathname);//obtengo la ruta 
+
     return (
         <header className="encabezado">
 
@@ -19,7 +30,9 @@ const Navbar = () => {
                 {/* si location.pathname es estrictamente igual al home muestrame los botones */}
                 {location.pathname === "/" && <div className="btns">
                     <Link to="/carta"><button>Carta</button></Link>
-                    <Link to="/iniciar"><button>Iniciar Sesión</button></Link>
+                    {/* condicional ternaria. si token es igual a null muéstrame iniciar sesión y si no muestrma cerra sesión */}
+                    {token === null ? 
+                    <Link to="/iniciar"><button>Iniciar Sesión</button></Link> : <button className='cerrar-sesion' onClick={cerrarSesion}>Cerrar Sesión</button>}
                 </div>}
 
                 {/* si si location.pathname es estrictamente igual a la vista carta, detalle y pedido muestra un carrito */}

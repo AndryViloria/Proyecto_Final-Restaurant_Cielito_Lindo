@@ -11,12 +11,10 @@ const Carta = (e) => {
 
     const detalleCarta = (id) => navigate(`/detalle/${id}`)
 
-    //hacer useState para modificar los elementos a través de una condicional y ocupando filter para poder filtrar la categoria de productos realizado con un select
     const [filtro, setFiltro] = useState("Todos");
     const [cartaMostrada, setCartaMostrada] = useState(carta);
 
     useEffect(() => {
-        //hacer filtro de carta que me muestre todos los productos
         if (filtro === "Todos") {
             setCartaMostrada(carta);
         } else if (filtro === "Comidas") {
@@ -29,7 +27,7 @@ const Carta = (e) => {
             });
             setCartaMostrada(comidas);
         } else {
-            //hacer filtro de carta que devuelva los liquidos y guardar los liquidos en carta mostrada
+            
             const tragos = carta.filter((producto) => {
                 if (producto.type === "Tragos") {
                     return true;
@@ -59,7 +57,7 @@ const Carta = (e) => {
                 </select>
             </div>
             <section className="card">
-                {/* método map para mostrar a través de un recorrido los productos de la página carta */}
+    
                 {
                     cartaMostrada.map((item) => {
                         return (<article key={item.id} className="tarjeta">

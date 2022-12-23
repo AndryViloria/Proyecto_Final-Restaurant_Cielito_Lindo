@@ -1,8 +1,8 @@
 import './App.css'
 //importar rutas
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState, useEffect } from 'react'//importar hooks
-import Context from './context/context.js'//importar context
+import { useState, useEffect } from 'react'
+import Context from './context/context.js'
 
 //componentes
 import Navbar from './components/Navbar.jsx'
@@ -18,21 +18,16 @@ import NotFound from './view/NotFound.jsx'
 import Detalle from './view/Detalle.jsx'
 import Iniciar from './view/Iniciar.jsx'
 
-//importar función formatearPrecio que está dentro del archivo utilidades.js
 import { formatearPrecio } from './utilidades/utilidades.js'
 
 function App() {
-  //crear variables y setter setCarta y setCarro para modificar los elementos
   const [carta, setCarta] = useState([])
   const [carro, setCarro] = useState([])
 
-  //función agregar al carro
   const addToCarro = (item) => {
-    //determinar si el carro tiene el producto que quiero agregar
     const itemIndex = carro.findIndex((producto) => producto.id === item.id)
     const updateCarro = [...carro]
 
-    //realizar una condicional if para saber si el carro no tiene el producto
     if (itemIndex === -1) {
       const producto = {
         id: item.id,
@@ -44,7 +39,6 @@ function App() {
 
       updateCarro.push(producto)
 
-      //si ya tiene el producto se incrementa la cuenta
     } else {
       updateCarro[itemIndex].count += 1
     }
@@ -52,7 +46,6 @@ function App() {
     setCarro(updateCarro)
   }
 
-  //Remover productos del carrito
   const removeFromCarro = (item) => {
     const itemIndex = carro.findIndex((producto) => producto.id === item.id)
     const updateCarro = [...carro]
@@ -66,7 +59,6 @@ function App() {
     setCarro(updateCarro)
   }
 
-  //Calcular total del carro
   const carroTotal = () => {
     let total = 0
     carro.forEach((item) => total += item.count * item.price)
@@ -74,7 +66,6 @@ function App() {
     return formatearPrecio(total)
   }
 
-  //ocupar hook useEffect para llamar a la ruta de carta.json y hacer la petición
   useEffect(() => {
     fetch('/carta.json')
       .then((res) => res.json())
@@ -82,7 +73,7 @@ function App() {
       .catch((error) => console.log(error))
   }, [])
 
-  //realizar un globalState
+
   const globalState = { carta, carro, addToCarro, removeFromCarro, carroTotal }
 
   return (

@@ -12,8 +12,8 @@ const [error, setError] = useState(false)
 //array de objetos 
 const correoContraseña = [
     {
-        email: 'travisbarker@blink182.com',
-        pass: 'tutupatutupa',
+        email: 'andry@correo.com',
+        pass: '1234',
     },
     {
         email: 'synystergates@avengedsevenfold.com', 

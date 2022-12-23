@@ -7,10 +7,9 @@ import Ingredients from "../components/Ingredients.jsx"
 import { formatearPrecio } from "../utilidades/utilidades.js"
 
 const Detalle = () => {
-    //1. capturar el id de los productos de la carta desde los parametros
+    
     const { id } = useParams()
 
-    //2. Traer el listado completo de los productos para despues ser filtrados
     const { carta, addToCarro } = useContext(Context)
 
     const [detalle, setDetalle] = useState({ingredients: [], price:0})
